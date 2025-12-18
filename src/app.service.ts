@@ -2,16 +2,15 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  getHealth(): any {
+    throw new Error('Method not implemented.');
   }
-  getMyNewEndpoint(): string {
-    return 'Hello desde MyNewEndpoint!';
+  getHello(): any {
+    return{
+      success: true,
+      message: 'lexander-post-api-online',
+      data: 'sistema post api',
+      version: '1.0.0',
+    }
   }
-  health(): object{
-    return {
-      service:'Blog Backend Api',
-      version:'Online',
-     };
-   }
 }
